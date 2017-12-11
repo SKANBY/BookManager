@@ -31,6 +31,22 @@ book3.author = "톨스토이"
 
 var myBook = BookManager()
 
-myBook.addBook(bookObject: book1)
-myBook.addBook(bookObject: book2)
-myBook.addBook(bookObject: book3)
+myBook.addBook(book1)
+myBook.addBook(book2)
+myBook.addBook(book3)
+
+print(myBook.showAllBook())
+
+print(myBook.countBook())
+
+var findResult = myBook.findBook("햄릿")
+
+if findResult != nil{
+    print("\(findResult!) 를 찾았습니다.\n")    //uwrapping
+}else{
+    print("찾으시는 책이 없는데요 ^^;")
+}
+
+myBook.removeBook("죄와벌")
+
+print(myBook.showAllBook())
